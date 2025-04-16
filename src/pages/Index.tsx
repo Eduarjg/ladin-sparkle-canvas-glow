@@ -19,7 +19,7 @@ const Index = () => {
           }} transition={{
             duration: 0.5
           }} className="flex items-center space-x-2">
-              <img src="/lovable-uploads/6196dfc2-a3ed-49bd-9144-f0901793053a.png" alt="Crescer+ Makers" className="h-20" />
+              <img alt="Crescer+ Makers" src="/lovable-uploads/b439af22-ddc7-4e26-9d3a-3a2a2948cb97.png" className="h-20" />
             </motion.div>
             <div className="hidden md:flex items-center space-x-8">
               <NavLink href="#home">Home</NavLink>
