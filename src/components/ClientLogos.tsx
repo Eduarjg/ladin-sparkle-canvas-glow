@@ -8,11 +8,11 @@ const ClientLogos = () => {
       <motion.div
         className="flex space-x-8"
         animate={{
-          x: [0, -1000],
+          x: [0, -1600],
         }}
         transition={{
           x: {
-            duration: 15,
+            duration: 20,
             repeat: Infinity,
             repeatType: "loop",
             ease: "linear",
@@ -20,30 +20,44 @@ const ClientLogos = () => {
         }}
       >
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo1.png" alt="ODE" className="h-12" />
+          <img src="logo1.png" alt="ODE" className="h-16" />
         </Card>
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo2.png" alt="TURBO" className="h-12" />
+          <img src="logo2.png" alt="TURBO" className="h-16" />
         </Card>
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo3.png" alt="LECOS" className="h-12" />
+          <img src="logo3.png" alt="LECOS" className="h-16" />
         </Card>
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo4.png" alt="ADESSI" className="h-12" />
+          <img src="logo4.png" alt="ADESSI" className="h-16" />
         </Card>
 
         {/* Duplicate for seamless loop */}
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo1.png" alt="ODE" className="h-12" />
+          <img src="logo1.png" alt="ODE" className="h-16" />
         </Card>
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo2.png" alt="TURBO" className="h-12" />
+          <img src="logo2.png" alt="TURBO" className="h-16" />
         </Card>
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo3.png" alt="LECOS" className="h-12" />
+          <img src="logo3.png" alt="LECOS" className="h-16" />
         </Card>
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo4.png" alt="ADESSI" className="h-12" />
+          <img src="logo4.png" alt="ADESSI" className="h-16" />
+        </Card>
+        
+        {/* Additional duplication for continuous effect */}
+        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
+          <img src="logo1.png" alt="ODE" className="h-16" />
+        </Card>
+        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
+          <img src="logo2.png" alt="TURBO" className="h-16" />
+        </Card>
+        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
+          <img src="logo3.png" alt="LECOS" className="h-16" />
+        </Card>
+        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
+          <img src="logo4.png" alt="ADESSI" className="h-16" />
         </Card>
       </motion.div>
     </div>
