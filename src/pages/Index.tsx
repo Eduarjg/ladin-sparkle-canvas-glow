@@ -1,8 +1,13 @@
-
 import { motion } from "framer-motion";
-import { ArrowRight, Star, Crown, Users, Rocket } from "lucide-react";
+import { ArrowRight, Star, Crown, Users, Rocket, Phone } from "lucide-react";
+import ClientLogos from "@/components/ClientLogos";
+import ContactForm from "@/components/ContactForm";
 
 const Index = () => {
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/seu_numero?text=Olá! Gostaria de saber mais sobre os serviços de tráfego pago.", "_blank");
+  };
+
   return (
     <div className="min-h-screen bg-[#0A0A0B] text-white">
       {/* Header/Nav */}
@@ -15,7 +20,7 @@ const Index = () => {
               transition={{ duration: 0.5 }}
               className="flex items-center space-x-2"
             >
-              <img src="public/lovable-uploads/6196dfc2-a3ed-49bd-9144-f0901793053a.png" alt="Crescer+ Makers" className="h-8" />
+              <img src="/lovable-uploads/6196dfc2-a3ed-49bd-9144-f0901793053a.png" alt="Crescer+ Makers" className="h-8" />
             </motion.div>
             <div className="hidden md:flex items-center space-x-8">
               <NavLink href="#home">Home</NavLink>
@@ -25,9 +30,11 @@ const Index = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-[#00FF76] text-[#0A0A0B] px-6 py-2 rounded-full font-medium hover:brightness-110 transition-all"
+                onClick={handleWhatsAppClick}
+                className="bg-[#00FF76] text-[#0A0A0B] px-6 py-2 rounded-full font-medium hover:brightness-110 transition-all inline-flex items-center space-x-2"
               >
-                Começar
+                <Phone className="w-4 h-4" />
+                <span>Começar</span>
               </motion.button>
             </div>
           </div>
@@ -72,12 +79,7 @@ const Index = () => {
       >
         <div className="container mx-auto px-6">
           <p className="text-center mb-12 text-gray-400">Empresas que confiam em Cresce+</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-            <motion.img whileHover={{ scale: 1.1 }} src="logo1.png" alt="ODE" className="h-8 opacity-70 hover:opacity-100 transition-all" />
-            <motion.img whileHover={{ scale: 1.1 }} src="logo2.png" alt="TURBO" className="h-8 opacity-70 hover:opacity-100 transition-all" />
-            <motion.img whileHover={{ scale: 1.1 }} src="logo3.png" alt="LECOS" className="h-8 opacity-70 hover:opacity-100 transition-all" />
-            <motion.img whileHover={{ scale: 1.1 }} src="logo4.png" alt="ADESSI" className="h-8 opacity-70 hover:opacity-100 transition-all" />
-          </div>
+          <ClientLogos />
         </div>
       </motion.section>
 
@@ -133,6 +135,13 @@ const Index = () => {
               description="Nossa prioridade é o seu sucesso, com estratégias personalizadas para cada objetivo."
             />
           </div>
+        </div>
+      </section>
+
+      {/* Contact Form Section */}
+      <section className="py-20 px-6">
+        <div className="container mx-auto">
+          <ContactForm />
         </div>
       </section>
     </div>
