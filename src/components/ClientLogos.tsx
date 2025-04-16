@@ -12,37 +12,38 @@ const ClientLogos = () => {
         }}
         transition={{
           x: {
-            duration: 20,
+            duration: 15,
             repeat: Infinity,
+            repeatType: "loop",
             ease: "linear",
           },
         }}
       >
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo1.png" alt="ODE" className="h-8" />
+          <img src="logo1.png" alt="ODE" className="h-12" />
         </Card>
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo2.png" alt="TURBO" className="h-8" />
+          <img src="logo2.png" alt="TURBO" className="h-12" />
         </Card>
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo3.png" alt="LECOS" className="h-8" />
+          <img src="logo3.png" alt="LECOS" className="h-12" />
         </Card>
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo4.png" alt="ADESSI" className="h-8" />
+          <img src="logo4.png" alt="ADESSI" className="h-12" />
         </Card>
 
         {/* Duplicate for seamless loop */}
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo1.png" alt="ODE" className="h-8" />
+          <img src="logo1.png" alt="ODE" className="h-12" />
         </Card>
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo2.png" alt="TURBO" className="h-8" />
+          <img src="logo2.png" alt="TURBO" className="h-12" />
         </Card>
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo3.png" alt="LECOS" className="h-8" />
+          <img src="logo3.png" alt="LECOS" className="h-12" />
         </Card>
         <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo4.png" alt="ADESSI" className="h-8" />
+          <img src="logo4.png" alt="ADESSI" className="h-12" />
         </Card>
       </motion.div>
     </div>

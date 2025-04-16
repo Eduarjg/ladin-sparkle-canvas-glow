@@ -7,6 +7,7 @@ import { useToast } from "@/hooks/use-toast";
 const ContactForm = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
+  const [whatsapp, setWhatsapp] = useState("");
   const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -17,6 +18,7 @@ const ContactForm = () => {
     });
     setEmail("");
     setName("");
+    setWhatsapp("");
   };
 
   return (
@@ -38,6 +40,16 @@ const ContactForm = () => {
           placeholder="Seu email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
+          className="bg-[#0A0A0B] border-[#00FF76]/20"
+        />
+      </div>
+      <div>
+        <Input
+          type="tel"
+          placeholder="Seu WhatsApp (com DDD)"
+          value={whatsapp}
+          onChange={(e) => setWhatsapp(e.target.value)}
           required
           className="bg-[#0A0A0B] border-[#00FF76]/20"
         />
