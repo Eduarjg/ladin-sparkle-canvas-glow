@@ -118,12 +118,6 @@ const Index = () => {
         }} className="text-3xl font-bold text-center mb-16">
             Por que escolher Cresce+?
           </motion.h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <FeatureCard icon={<Star className="w-6 h-6 text-[#00FF76]" />} title="Experiência" description="Na Cresce+, transformamos seu anúncio em resultado, com mais de dois anos de experiência, criamos campanhas otimizadas." />
-            <FeatureCard icon={<Crown className="w-6 h-6 text-[#00FF76]" />} title="Soluções otimizadas" description="Soluções otimizadas para resultados reais e crescimento consistente do seu negócio." />
-            <FeatureCard icon={<Users className="w-6 h-6 text-[#00FF76]" />} title="Assessoria colaborativa" description="Trabalhamos em conjunto para garantir os melhores resultados para sua empresa." />
-            <FeatureCard icon={<Rocket className="w-6 h-6 text-[#00FF76]" />} title="Enfoque centrado no cliente" description="Nossa prioridade é o seu sucesso, com estratégias personalizadas para cada objetivo." />
-          </div>
         </div>
       </section>
 
