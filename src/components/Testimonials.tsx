@@ -1,7 +1,6 @@
 
 import { motion } from "framer-motion";
 import { Star } from "lucide-react";
-import { Card } from "@/components/ui/card";
 
 const Testimonials = () => {
   const testimonials = [
@@ -10,18 +9,21 @@ const Testimonials = () => {
       company: "TechSoft",
       text: "A equipe da Cresce+ transformou completamente nossa presença digital. Nosso ROI aumentou em 250% nos primeiros três meses!",
       rating: 5,
+      avatar: "/lovable-uploads/9c233040-a823-4bc4-9c91-5f5518bca499.png",
     },
     {
       name: "Mariana Costa",
       company: "Bella Moda",
       text: "Trabalhar com a Cresce+ foi uma experiência incrível. Eles realmente entendem como gerar resultados reais com tráfego pago.",
       rating: 5,
+      avatar: "/lovable-uploads/9c233040-a823-4bc4-9c91-5f5518bca499.png",
     },
     {
       name: "Pedro Almeida",
       company: "Construtech",
       text: "Profissionais extremamente competentes. Conseguimos aumentar nossas conversões em 180% com as estratégias implementadas.",
       rating: 5,
+      avatar: "/lovable-uploads/9c233040-a823-4bc4-9c91-5f5518bca499.png",
     },
   ];
 
@@ -46,7 +48,7 @@ const Testimonials = () => {
   );
 };
 
-const TestimonialCard = ({ name, company, text, rating }: any) => (
+const TestimonialCard = ({ name, company, text, rating, avatar }: any) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -60,9 +62,16 @@ const TestimonialCard = ({ name, company, text, rating }: any) => (
       ))}
     </div>
     <p className="text-gray-400 mb-6">"{text}"</p>
-    <div>
-      <h4 className="font-semibold">{name}</h4>
-      <p className="text-sm text-gray-500">{company}</p>
+    <div className="flex items-center">
+      {avatar && (
+        <div className="w-10 h-10 rounded-full overflow-hidden mr-3 bg-gray-800">
+          <img src={avatar} alt={name} className="w-full h-full object-cover" />
+        </div>
+      )}
+      <div>
+        <h4 className="font-semibold">{name}</h4>
+        <p className="text-sm text-gray-500">{company}</p>
+      </div>
     </div>
   </motion.div>
 );

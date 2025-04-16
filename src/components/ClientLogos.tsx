@@ -1,64 +1,40 @@
 
 import { motion } from "framer-motion";
-import { Card } from "@/components/ui/card";
 
 const ClientLogos = () => {
   return (
-    <div className="overflow-hidden relative w-full">
+    <div className="overflow-hidden relative w-full py-8">
       <motion.div
-        className="flex space-x-8"
+        className="flex space-x-16 items-center"
         animate={{
-          x: [0, -1600],
+          x: [0, -2000],
         }}
         transition={{
           x: {
-            duration: 20,
+            duration: 25,
             repeat: Infinity,
             repeatType: "loop",
             ease: "linear",
           },
         }}
       >
-        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo1.png" alt="ODE" className="h-16" />
-        </Card>
-        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo2.png" alt="TURBO" className="h-16" />
-        </Card>
-        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo3.png" alt="LECOS" className="h-16" />
-        </Card>
-        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo4.png" alt="ADESSI" className="h-16" />
-        </Card>
-
-        {/* Duplicate for seamless loop */}
-        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo1.png" alt="ODE" className="h-16" />
-        </Card>
-        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo2.png" alt="TURBO" className="h-16" />
-        </Card>
-        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo3.png" alt="LECOS" className="h-16" />
-        </Card>
-        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo4.png" alt="ADESSI" className="h-16" />
-        </Card>
+        {/* First set of logos */}
+        <motion.img whileHover={{ scale: 1.1 }} src="logo1.png" alt="ODE" className="h-30 opacity-90 hover:opacity-100 transition-all" />
+        <motion.img whileHover={{ scale: 1.1 }} src="logo2.png" alt="TURBO" className="h-30 opacity-90 hover:opacity-100 transition-all" />
+        <motion.img whileHover={{ scale: 1.1 }} src="logo3.png" alt="LECOS" className="h-30 opacity-90 hover:opacity-100 transition-all" />
+        <motion.img whileHover={{ scale: 1.1 }} src="logo4.png" alt="ADESSI" className="h-30 opacity-90 hover:opacity-100 transition-all" />
         
-        {/* Additional duplication for continuous effect */}
-        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo1.png" alt="ODE" className="h-16" />
-        </Card>
-        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo2.png" alt="TURBO" className="h-16" />
-        </Card>
-        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo3.png" alt="LECOS" className="h-16" />
-        </Card>
-        <Card className="shrink-0 p-4 bg-[#111111]/50 backdrop-blur">
-          <img src="logo4.png" alt="ADESSI" className="h-16" />
-        </Card>
+        {/* Duplicate set for continuous loop */}
+        <motion.img whileHover={{ scale: 1.1 }} src="logo1.png" alt="ODE" className="h-30 opacity-90 hover:opacity-100 transition-all" />
+        <motion.img whileHover={{ scale: 1.1 }} src="logo2.png" alt="TURBO" className="h-30 opacity-90 hover:opacity-100 transition-all" />
+        <motion.img whileHover={{ scale: 1.1 }} src="logo3.png" alt="LECOS" className="h-30 opacity-90 hover:opacity-100 transition-all" />
+        <motion.img whileHover={{ scale: 1.1 }} src="logo4.png" alt="ADESSI" className="h-30 opacity-90 hover:opacity-100 transition-all" />
+        
+        {/* Third set for extra smoothness */}
+        <motion.img whileHover={{ scale: 1.1 }} src="logo1.png" alt="ODE" className="h-30 opacity-90 hover:opacity-100 transition-all" />
+        <motion.img whileHover={{ scale: 1.1 }} src="logo2.png" alt="TURBO" className="h-30 opacity-90 hover:opacity-100 transition-all" />
+        <motion.img whileHover={{ scale: 1.1 }} src="logo3.png" alt="LECOS" className="h-30 opacity-90 hover:opacity-100 transition-all" />
+        <motion.img whileHover={{ scale: 1.1 }} src="logo4.png" alt="ADESSI" className="h-30 opacity-90 hover:opacity-100 transition-all" />
       </motion.div>
     </div>
   );
