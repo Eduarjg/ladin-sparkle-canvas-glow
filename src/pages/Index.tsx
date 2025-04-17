@@ -1,12 +1,14 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Crown, Users, Rocket, Phone, MessageSquare } from "lucide-react";
-import ClientLogos from "@/components/ClientLogos";
 import ContactForm from "@/components/ContactForm";
 import Testimonials from "@/components/Testimonials";
+import BrandLogos from "@/components/BrandLogos";
+
 const Index = () => {
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/seu_numero?text=Olá! Gostaria de saber mais sobre os serviços de tráfego pago.", "_blank");
   };
+  
   return <div className="min-h-screen bg-[#0A0A0B] text-white">
       {/* Header/Nav */}
       <nav className="fixed w-full top-0 z-50 bg-[#0A0A0B]/80 backdrop-blur-lg border-b border-[#00FF76]/10">
@@ -19,12 +21,12 @@ const Index = () => {
           }} transition={{
             duration: 0.5
           }} className="flex items-center space-x-2">
-              <img alt="Crescer+ Makers" src="/lovable-uploads/b439af22-ddc7-4e26-9d3a-3a2a2948cb97.png" className="h-20" />
+              <img alt="Crescer+ Makers" src="/lovable-uploads/b439af22-ddc7-4e26-9d3a-3a2a2948cb97.png" className="h-30" />
             </motion.div>
             <div className="hidden md:flex items-center space-x-8">
               <NavLink href="#home">Home</NavLink>
               <NavLink href="#servicos">Serviços</NavLink>
-              <NavLink href="#nosotros">Sobre nós</NavLink>
+              <NavLink href="#nossos">Sobre nós</NavLink>
               <motion.button whileHover={{
               scale: 1.05
             }} whileTap={{
@@ -71,16 +73,15 @@ const Index = () => {
       </section>
 
       {/* Logos Section */}
-      <motion.section initial={{
-      opacity: 0
-    }} whileInView={{
-      opacity: 1
-    }} transition={{
-      duration: 0.8
-    }} className="py-20 border-t border-b border-[#00FF76]/10">
+      <motion.section 
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 0.8 }}
+        className="py-20 border-t border-b border-[#00FF76]/10"
+      >
         <div className="container mx-auto px-6">
-          <p className="text-center mb-12 text-gray-400">Empresas que confiam em Cresce+</p>
-          <ClientLogos />
+          <p className="text-center mb-12 text-gray-400 font-medium">Empresas que confiam em Cresce+</p>
+          <BrandLogos />
         </div>
       </motion.section>
 
@@ -105,7 +106,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-6 bg-[#00FF76]/5" id="nosotros">
+      <section className="py-20 px-6 bg-[#00FF76]/5" id="nossos">
         <div className="container mx-auto">
           <motion.h2 initial={{
           opacity: 0,
@@ -138,6 +139,7 @@ const Index = () => {
       <Testimonials />
     </div>;
 };
+
 const NavLink = ({
   href,
   children
@@ -151,6 +153,7 @@ const NavLink = ({
 }}>
     {children}
   </motion.a>;
+
 const ServiceCard = ({
   icon,
   title,
@@ -172,6 +175,7 @@ const ServiceCard = ({
     <h3 className="text-xl font-semibold mb-3">{title}</h3>
     <p className="text-gray-400">{description}</p>
   </motion.div>;
+
 const FeatureCard = ({
   icon,
   title,
@@ -191,6 +195,7 @@ const FeatureCard = ({
     <h3 className="text-xl font-semibold mb-3">{title}</h3>
     <p className="text-gray-400">{description}</p>
   </motion.div>;
+
 const services = [{
   icon: <Star className="w-6 h-6 text-[#00FF76]" />,
   title: "Desenvolvimento de contas",
@@ -204,4 +209,5 @@ const services = [{
   title: "Otimização de anúncios",
   description: "Anúncios otimizados para alcançar seu público-alvo de forma eficiente."
 }];
+
 export default Index;
