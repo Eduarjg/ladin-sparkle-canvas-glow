@@ -1,8 +1,9 @@
+
 import { motion } from "framer-motion";
 import { ArrowRight, Star, Crown, Users, Rocket } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Testimonials from "@/components/Testimonials";
-import BrandLogos from "@/components/BrandLogos";
+import ClientLogos from "@/components/ClientLogos";
 import Header from "@/components/Header";
 
 const Index = () => {
@@ -47,17 +48,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Logos Section */}
+      {/* Logos Section with Continuous Scrolling */}
       <motion.section 
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 0.8 }}
-        className="py-20 border-t border-b border-[#00FF76]/10"
       >
-        <div className="container mx-auto px-6">
-          <p className="text-center mb-12 text-gray-400 font-medium">Empresas que confiam em Cresce+</p>
-          <BrandLogos />
+        <div className="container mx-auto">
+          <p className="text-center mb-6 text-gray-400 font-medium">Empresas que confiam em Cresce+</p>
         </div>
+        <ClientLogos />
       </motion.section>
 
       {/* Services Section */}
