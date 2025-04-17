@@ -1,44 +1,19 @@
 import { motion } from "framer-motion";
-import { ArrowRight, Star, Crown, Users, Rocket, Phone, MessageSquare } from "lucide-react";
+import { ArrowRight, Star, Crown, Users, Rocket } from "lucide-react";
 import ContactForm from "@/components/ContactForm";
 import Testimonials from "@/components/Testimonials";
 import BrandLogos from "@/components/BrandLogos";
+import Header from "@/components/Header";
 
 const Index = () => {
   const handleWhatsAppClick = () => {
     window.open("https://wa.me/seu_numero?text=Olá! Gostaria de saber mais sobre os serviços de tráfego pago.", "_blank");
   };
   
-  return <div className="min-h-screen bg-[#0A0A0B] text-white">
-      {/* Header/Nav */}
-      <nav className="fixed w-full top-0 z-50 bg-[#0A0A0B]/80 backdrop-blur-lg border-b border-[#00FF76]/10">
-        <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <motion.div initial={{
-            opacity: 0
-          }} animate={{
-            opacity: 1
-          }} transition={{
-            duration: 0.5
-          }} className="flex items-center space-x-2">
-              <img alt="Crescer+ Makers" src="/lovable-uploads/b439af22-ddc7-4e26-9d3a-3a2a2948cb97.png" className="h-30" />
-            </motion.div>
-            <div className="hidden md:flex items-center space-x-8">
-              <NavLink href="#home">Home</NavLink>
-              <NavLink href="#servicos">Serviços</NavLink>
-              <NavLink href="#nossos">Sobre nós</NavLink>
-              <motion.button whileHover={{
-              scale: 1.05
-            }} whileTap={{
-              scale: 0.95
-            }} onClick={handleWhatsAppClick} className="bg-[#00FF76] text-[#0A0A0B] px-6 py-2 rounded-full font-medium hover:brightness-110 transition-all inline-flex items-center space-x-2">
-                <MessageSquare className="w-4 h-4" />
-                <span>WhatsApp</span>
-              </motion.button>
-            </div>
-          </div>
-        </div>
-      </nav>
+  return (
+    <div className="min-h-screen bg-[#0A0A0B] text-white">
+      {/* Header */}
+      <Header />
 
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-6" id="home">
@@ -137,22 +112,9 @@ const Index = () => {
 
       {/* Testimonials Section */}
       <Testimonials />
-    </div>;
+    </div>
+  );
 };
-
-const NavLink = ({
-  href,
-  children
-}: {
-  href: string;
-  children: React.ReactNode;
-}) => <motion.a href={href} className="text-gray-300 hover:text-[#00FF76] transition-colors" whileHover={{
-  scale: 1.05
-}} whileTap={{
-  scale: 0.95
-}}>
-    {children}
-  </motion.a>;
 
 const ServiceCard = ({
   icon,
