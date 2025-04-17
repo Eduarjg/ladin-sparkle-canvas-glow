@@ -30,7 +30,7 @@ const Index = () => {
         }} className="text-center max-w-4xl mx-auto">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Gestão de tráfego pago de alta performance e{" "}
-              <span className="text-[#00FF76]">aceleração digital</span>
+              <span className="text-[#01F28D]">aceleração digital</span>
             </h1>
             <p className="text-lg text-gray-400 mb-8">
               Geramos tráfego qualificado e vendas consistentes para sua empresa
@@ -40,7 +40,7 @@ const Index = () => {
             scale: 1.05
           }} whileTap={{
             scale: 0.95
-          }} onClick={handleWhatsAppClick} className="bg-[#00FF76] text-[#0A0A0B] px-8 py-3 rounded-full font-medium inline-flex items-center space-x-2 hover:brightness-110 transition-all">
+          }} onClick={handleWhatsAppClick} className="bg-[#01F28D] text-[#0A0A0B] px-8 py-3 rounded-full font-medium inline-flex items-center space-x-2 hover:brightness-110 transition-all">
               <span>Começar agora</span>
               <ArrowRight className="w-4 h-4" />
             </motion.button>
@@ -81,7 +81,7 @@ const Index = () => {
       </section>
 
       {/* Features Section */}
-      <section className="py-20 px-6 bg-[#00FF76]/5" id="nossos">
+      <section className="py-20 px-6 bg-[#01F28D]/5" id="nossos">
         <div className="container mx-auto">
           <motion.h2 initial={{
           opacity: 0,
@@ -96,10 +96,10 @@ const Index = () => {
           </motion.h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
-            <FeatureCard icon={<Star className="w-6 h-6 text-[#00FF76]" />} title="Experiência" description="Na Cresce+, transformamos seu anúncio em resultado, com mais de dois anos de experiência, criamos campanhas otimizadas." />
-            <FeatureCard icon={<Crown className="w-6 h-6 text-[#00FF76]" />} title="Soluções otimizadas" description="Soluções otimizadas para resultados reais e crescimento consistente do seu negócio." />
-            <FeatureCard icon={<Users className="w-6 h-6 text-[#00FF76]" />} title="Assessoria colaborativa" description="Trabalhamos em conjunto para garantir os melhores resultados para sua empresa." />
-            <FeatureCard icon={<Rocket className="w-6 h-6 text-[#00FF76]" />} title="Enfoque centrado no cliente" description="Nossa prioridade é o seu sucesso, com estratégias personalizadas para cada objetivo." />
+            <FeatureCard icon={<Star className="w-6 h-6 text-[#01F28D]" />} title="Experiência" description="Na Cresce+, transformamos seu anúncio em resultado, com mais de dois anos de experiência, criamos campanhas otimizadas." />
+            <FeatureCard icon={<Crown className="w-6 h-6 text-[#01F28D]" />} title="Soluções otimizadas" description="Soluções otimizadas para resultados reais e crescimento consistente do seu negócio." />
+            <FeatureCard icon={<Users className="w-6 h-6 text-[#01F28D]" />} title="Assessoria colaborativa" description="Trabalhamos em conjunto para garantir os melhores resultados para sua empresa." />
+            <FeatureCard icon={<Rocket className="w-6 h-6 text-[#01F28D]" />} title="Enfoque centrado no cliente" description="Nossa prioridade é o seu sucesso, com estratégias personalizadas para cada objetivo." />
           </div>
       </section>
 
@@ -130,8 +130,8 @@ const ServiceCard = ({
   y: -5
 }} transition={{
   duration: 0.5
-}} className="p-6 rounded-xl bg-[#111111] border border-[#00FF76]/10 hover:border-[#00FF76]/30 transition-all">
-    <div className="w-12 h-12 bg-[#00FF76]/10 rounded-lg flex items-center justify-center mb-4">
+}} className="p-6 rounded-xl bg-[#111111] border border-[#01F28D]/10 hover:border-[#01F28D]/30 transition-all">
+    <div className="w-12 h-12 bg-[#01F28D]/10 rounded-lg flex items-center justify-center mb-4">
       {icon}
     </div>
     <h3 className="text-xl font-semibold mb-3">{title}</h3>
@@ -152,22 +152,22 @@ const FeatureCard = ({
   y: -5
 }} transition={{
   duration: 0.5
-}} className="p-6 rounded-xl bg-[#111111] border border-[#00FF76]/10 hover:border-[#00FF76]/30 transition-all">
+}} className="p-6 rounded-xl bg-[#111111] border border-[#01F28D]/10 hover:border-[#01F28D]/30 transition-all">
     <div className="mb-4">{icon}</div>
     <h3 className="text-xl font-semibold mb-3">{title}</h3>
     <p className="text-gray-400">{description}</p>
   </motion.div>;
 
 const services = [{
-  icon: <Star className="w-6 h-6 text-[#00FF76]" />,
+  icon: <Star className="w-6 h-6 text-[#01F28D]" />,
   title: "Desenvolvimento de contas",
   description: "Otimizamos suas campanhas para máxima performance e resultados."
 }, {
-  icon: <Crown className="w-6 h-6 text-[#00FF76]" />,
+  icon: <Crown className="w-6 h-6 text-[#01F28D]" />,
   title: "Relatórios semanais",
   description: "Acompanhamento detalhado com métricas relevantes para seu negócio."
 }, {
-  icon: <Rocket className="w-6 h-6 text-[#00FF76]" />,
+  icon: <Rocket className="w-6 h-6 text-[#01F28D]" />,
   title: "Otimização de anúncios",
   description: "Anúncios otimizados para alcançar seu público-alvo de forma eficiente."
 }];

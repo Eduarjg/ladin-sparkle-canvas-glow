@@ -54,11 +54,11 @@ const TestimonialCard = ({ name, company, text, rating, avatar }: any) => (
     whileInView={{ opacity: 1, y: 0 }}
     whileHover={{ y: -5 }}
     transition={{ duration: 0.5 }}
-    className="p-6 rounded-xl bg-[#111111] border border-[#00FF76]/10 hover:border-[#00FF76]/30 transition-all"
+    className="p-6 rounded-xl bg-[#111111] border border-[#01F28D]/10 hover:border-[#01F28D]/30 transition-all"
   >
     <div className="flex mb-4">
       {Array.from({ length: rating }).map((_, i) => (
-        <Star key={i} className="w-5 h-5 text-[#00FF76] fill-[#00FF76]" />
+        <Star key={i} className="w-5 h-5 text-[#01F28D] fill-[#01F28D]" />
       ))}
     </div>
     <p className="text-gray-400 mb-6">"{text}"</p>

@@ -36,7 +36,7 @@ const ClientLogos = () => {
   };
 
   return (
-    <div className="w-full py-10 overflow-hidden bg-[#0A0A0B]/80 border-t border-b border-[#00FF76]/10">
+    <div className="w-full py-10 overflow-hidden bg-[#0A0A0B]/80 border-t border-b border-[#01F28D]/10">
       <div className="relative overflow-hidden">
         <motion.div
           className="flex items-center gap-16 whitespace-nowrap"

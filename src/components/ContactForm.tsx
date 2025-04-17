@@ -22,7 +22,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-6 bg-[#111111] rounded-xl border border-[#00FF76]/10">
+    <form onSubmit={handleSubmit} className="space-y-4 max-w-md mx-auto p-6 bg-[#111111] rounded-xl border border-[#01F28D]/10">
       <h3 className="text-xl font-semibold mb-4">Receba mais informações</h3>
       <div>
         <Input
@@ -31,7 +31,7 @@ const ContactForm = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="bg-[#0A0A0B] border-[#00FF76]/20"
+          className="bg-[#0A0A0B] border-[#01F28D]/20"
         />
       </div>
       <div>
@@ -41,7 +41,7 @@ const ContactForm = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="bg-[#0A0A0B] border-[#00FF76]/20"
+          className="bg-[#0A0A0B] border-[#01F28D]/20"
         />
       </div>
       <div>
@@ -51,10 +51,10 @@ const ContactForm = () => {
           value={whatsapp}
           onChange={(e) => setWhatsapp(e.target.value)}
           required
-          className="bg-[#0A0A0B] border-[#00FF76]/20"
+          className="bg-[#0A0A0B] border-[#01F28D]/20"
         />
       </div>
-      <Button type="submit" className="w-full bg-[#00FF76] text-[#0A0A0B] hover:bg-[#00FF76]/90">
+      <Button type="submit" className="w-full bg-[#01F28D] text-[#0A0A0B] hover:bg-[#01F28D]/90">
         Enviar
       </Button>
     </form>
