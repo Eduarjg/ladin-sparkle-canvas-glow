@@ -40,7 +40,8 @@ const ContactForm = () => {
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setLoading(true);
     try {
-      const { error } = await supabase.from("leads").insert([values]);
+      // Corrigido o formato do objeto passado para o insert
+      const { error } = await supabase.from("leads").insert(values);
       
       if (error) throw error;
 
