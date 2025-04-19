@@ -15,6 +15,7 @@ import {
 } from "@/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
 
+// Define the schema for form validation
 const formSchema = z.object({
   name: z.string().min(1, "Nome é obrigatório"),
   email: z.string().email("E-mail inválido"),
@@ -25,10 +26,18 @@ const formSchema = z.object({
     .regex(/^\d+$/, "WhatsApp deve conter apenas números"),
 });
 
+// Define the type for the form data that matches Supabase's requirements
+type FormValues = z.infer<typeof formSchema>;
+interface LeadData {
+  name: string;
+  email: string;
+  whatsapp: string;
+}
+
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
   const { toast } = useToast();
-  const form = useForm<z.infer<typeof formSchema>>({
+  const form = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     defaultValues: {
       name: "",
@@ -37,11 +46,17 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+  const onSubmit = async (values: FormValues) => {
     setLoading(true);
     try {
-      // Corrigido o formato do objeto passado para o insert
-      const { error } = await supabase.from("leads").insert(values);
+      // Create a properly typed object for Supabase insert
+      const leadData: LeadData = {
+        name: values.name,
+        email: values.email,
+        whatsapp: values.whatsapp,
+      };
+      
+      const { error } = await supabase.from("leads").insert(leadData);
       
       if (error) throw error;
 
