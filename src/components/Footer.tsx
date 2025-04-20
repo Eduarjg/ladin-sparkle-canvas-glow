@@ -43,7 +43,7 @@ const Footer = () => {
 
       {/* Copyright Section */}
       <div className="text-center py-4 border-t border-[#01F28D]/20">
-        <p className="text-sm">© 2024 Designz | Todos los derechos reservados</p>
+        <p className="text-sm">© 2025 Creça+Market | Todos los derechos reservados</p>
       </div>
     </footer>;
 };
