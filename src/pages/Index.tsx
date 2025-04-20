@@ -5,6 +5,7 @@ import ContactForm from "@/components/ContactForm";
 import Testimonials from "@/components/Testimonials";
 import ClientLogos from "@/components/ClientLogos";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   const handleWhatsAppClick = () => {
@@ -112,6 +113,9 @@ const Index = () => {
 
       {/* Testimonials Section */}
       <Testimonials />
+      
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };
