@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Instagram, Facebook } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -65,7 +64,7 @@ const Footer = () => {
         {/* Right: Social Icons */}
         <div className="flex justify-end space-x-4">
           <span 
-            onClick={() => window.open('https://instagram.com', '_blank')}
+            onClick={() => window.open('https://www.instagram.com/crecamarkers/', '_blank')}
             className="text-[#01F28D] hover:opacity-80 transition-opacity cursor-pointer"
           >
             <Instagram size={24} />
