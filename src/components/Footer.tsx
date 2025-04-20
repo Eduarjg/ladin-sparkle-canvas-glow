@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Instagram, Facebook } from 'lucide-react';
 import { motion } from 'framer-motion';
+
 const Footer = () => {
   return <footer className="bg-black text-white">
       {/* Contact Button Section */}
@@ -18,26 +20,25 @@ const Footer = () => {
       <div className="grid grid-cols-3 gap-8 px-16 py-12 bg-[#111111]">
         {/* Left: Logo and Brand */}
         <div>
-          <h2 className="text-[#01F28D] text-2xl font-bold">Creça+Market
-        </h2>
+          <h2 className="text-[#01F28D] text-2xl font-bold">Creça+Market</h2>
         </div>
 
         {/* Center: Navigation Links */}
         <div className="flex justify-center space-x-6">
-          <a href="/" className="text-white hover:text-[#01F28D] transition-colors">Home</a>
-          <a href="/services" className="text-white hover:text-[#01F28D] transition-colors">Serviços</a>
-          <a href="/about" className="text-white hover:text-[#01F28D] transition-colors">Nosotros</a>
-          <a href="/blog" className="text-white hover:text-[#01F28D] transition-colors">Blog</a>
+          <span className="text-white hover:text-[#01F28D] transition-colors cursor-pointer">Home</span>
+          <span className="text-white hover:text-[#01F28D] transition-colors cursor-pointer">Serviços</span>
+          <span className="text-white hover:text-[#01F28D] transition-colors cursor-pointer">Nosotros</span>
+          <span className="text-white hover:text-[#01F28D] transition-colors cursor-pointer">Blog</span>
         </div>
 
         {/* Right: Social Icons */}
         <div className="flex justify-end space-x-4">
-          <a href="#" className="text-[#01F28D] hover:opacity-80 transition-opacity">
+          <span className="text-[#01F28D] hover:opacity-80 transition-opacity cursor-pointer">
             <Instagram size={24} />
-          </a>
-          <a href="#" className="text-[#01F28D] hover:opacity-80 transition-opacity">
+          </span>
+          <span className="text-[#01F28D] hover:opacity-80 transition-opacity cursor-pointer">
             <Facebook size={24} />
-          </a>
+          </span>
         </div>
       </div>
 
@@ -48,3 +49,4 @@ const Footer = () => {
     </footer>;
 };
 export default Footer;
+
