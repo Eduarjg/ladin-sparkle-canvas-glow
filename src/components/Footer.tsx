@@ -1,8 +1,6 @@
-
 import React from 'react';
 import { Instagram, Facebook } from 'lucide-react';
 import { motion } from 'framer-motion';
-
 const Footer = () => {
   return <footer className="bg-black text-white">
       {/* Contact Button Section */}
@@ -25,10 +23,10 @@ const Footer = () => {
 
         {/* Center: Navigation Links */}
         <div className="flex justify-center space-x-6">
-          <span className="text-white hover:text-[#01F28D] transition-colors cursor-pointer">Home</span>
-          <span className="text-white hover:text-[#01F28D] transition-colors cursor-pointer">Serviços</span>
-          <span className="text-white hover:text-[#01F28D] transition-colors cursor-pointer">Nosotros</span>
-          <span className="text-white hover:text-[#01F28D] transition-colors cursor-pointer">Blog</span>
+          
+          
+          <span className="text-white hover:text-[#01F28D] transition-colors cursor-pointer mx-0"></span>
+          
         </div>
 
         {/* Right: Social Icons */}
@@ -49,4 +47,3 @@ const Footer = () => {
     </footer>;
 };
 export default Footer;
-
