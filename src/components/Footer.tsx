@@ -4,6 +4,17 @@ import { Instagram, Facebook } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Footer = () => {
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleWhatsAppClick = () => {
+    window.open("https://wa.me/seu_numero?text=Olá! Gostaria de saber mais sobre os serviços de tráfego pago.", "_blank");
+  };
+
   return (
     <footer className="bg-black text-white">
       {/* Contact Button Section */}
@@ -15,6 +26,7 @@ const Footer = () => {
           whileTap={{
             scale: 0.95
           }} 
+          onClick={handleWhatsAppClick}
           className="bg-black text-[#01F28D] border border-[#01F28D] px-8 py-3 rounded-full font-bold"
         >
           Entrar em contato
@@ -30,17 +42,38 @@ const Footer = () => {
 
         {/* Center: Navigation Links */}
         <div className="flex justify-center space-x-6">
-          <span className="text-white hover:text-[#01F28D] transition-colors cursor-pointer">Home</span>
-          <span className="text-white hover:text-[#01F28D] transition-colors cursor-pointer">Serviços</span>
-          <span className="text-white hover:text-[#01F28D] transition-colors cursor-pointer">Sobre</span>
+          <span 
+            onClick={() => scrollToSection('home')}
+            className="text-white hover:text-[#01F28D] transition-colors cursor-pointer"
+          >
+            Home
+          </span>
+          <span 
+            onClick={() => scrollToSection('servicos')}
+            className="text-white hover:text-[#01F28D] transition-colors cursor-pointer"
+          >
+            Serviços
+          </span>
+          <span 
+            onClick={() => scrollToSection('nossos')}
+            className="text-white hover:text-[#01F28D] transition-colors cursor-pointer"
+          >
+            Sobre
+          </span>
         </div>
 
         {/* Right: Social Icons */}
         <div className="flex justify-end space-x-4">
-          <span className="text-[#01F28D] hover:opacity-80 transition-opacity cursor-pointer">
+          <span 
+            onClick={() => window.open('https://instagram.com', '_blank')}
+            className="text-[#01F28D] hover:opacity-80 transition-opacity cursor-pointer"
+          >
             <Instagram size={24} />
           </span>
-          <span className="text-[#01F28D] hover:opacity-80 transition-opacity cursor-pointer">
+          <span 
+            onClick={() => window.open('https://facebook.com', '_blank')}
+            className="text-[#01F28D] hover:opacity-80 transition-opacity cursor-pointer"
+          >
             <Facebook size={24} />
           </span>
         </div>
